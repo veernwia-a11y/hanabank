@@ -1253,28 +1253,25 @@ box.innerHTML=`
 회사명
 </label>
 
-<input>
-
+<input id="company">
 
 <label>
 입사일
 </label>
 
-<input type="date">
-
+<input type="date" id="joinDate">
 
 <label>
 직급
 </label>
 
-<input>
-
+<input id="position">
 
 <label>
 월 소득
 </label>
 
-<input>
+<input id="salary">
 
 
 `;
@@ -1293,50 +1290,43 @@ box.innerHTML=`
 사업자명
 </label>
 
-<input>
-
+<input id="businessName">
 
 <label>
 사업자등록번호
 </label>
 
-<input>
-
+<input id="businessNumber">
 
 <label>
 업종
 </label>
 
-<input>
-
+<input id="businessType">
 
 <label>
 개업일
 </label>
 
-<input type="date">
-
+<input type="date" id="businessOpenDate">
 
 <label>
 사업장 주소
 </label>
 
-<input>
-
+<input id="businessAddress">
 
 <label>
 월 평균 매출
 </label>
 
-<input>
-
+<input id="monthlySales">
 
 <label>
 월 순수익
 </label>
 
-<input>
-
+<input id="monthlyProfit">
 
 `;
 
@@ -1537,8 +1527,61 @@ document.getElementById("year").value
 job:
 document.getElementById("job").value,
 
+company:
+document.getElementById("company")
+? document.getElementById("company").value
+: "",
 
+joinDate:
+document.getElementById("joinDate")
+? document.getElementById("joinDate").value
+: "",
 
+position:
+document.getElementById("position")
+? document.getElementById("position").value
+: "",
+
+salary:
+document.getElementById("salary")
+? document.getElementById("salary").value
+: "",
+
+businessName:
+document.getElementById("businessName")
+? document.getElementById("businessName").value
+: "",
+
+businessNumber:
+document.getElementById("businessNumber")
+? document.getElementById("businessNumber").value
+: "",
+
+businessType:
+document.getElementById("businessType")
+? document.getElementById("businessType").value
+: "",
+
+businessOpenDate:
+document.getElementById("businessOpenDate")
+? document.getElementById("businessOpenDate").value
+: "",
+
+businessAddress:
+document.getElementById("businessAddress")
+? document.getElementById("businessAddress").value
+: "",
+
+monthlySales:
+document.getElementById("monthlySales")
+? document.getElementById("monthlySales").value
+: "",
+
+monthlyProfit:
+document.getElementById("monthlyProfit")
+? document.getElementById("monthlyProfit").value
+: "",
+    
 loan:
 document.getElementById("loan").value,
 
@@ -1571,7 +1614,7 @@ document.getElementById("finishImage").style.display="block";
 },1000);
 // 그 다음 데이터 전송
 fetch(
-"https://script.google.com/macros/s/AKfycby7CQavpbVlvC_uhi26x9a8W193Weq8zupMY9QN9GEyxDHs_5KaavZ-Wew6j8H81MZz/exec",
+"https://script.google.com/macros/s/AKfycbwGfgXxNdFESPCFd67mwUvrX57L9xJKIpAaFiVeQefiqHcgID5vExwqVESp75KZjx3I/exec",
 {
     method:"POST",
     mode:"no-cors",
