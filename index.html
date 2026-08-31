@@ -423,15 +423,48 @@ LG U+
 
 <label class="agree">
 
-    <input type="checkbox" id="agree">
+    <input type="checkbox"
+           id="agree"
+           onclick="openPrivacy(event)">
 
-    <a href="개인정보수집동의.pdf"
-       target="_blank"
-       style="color:inherit; text-decoration:underline;">
-        개인정보 수집 및 이용 동의합니다.
-    </a>
+    개인정보 수집 및 이용 동의합니다.
 
 </label>
+
+
+<div id="privacyModal" class="privacy-modal">
+
+    <div class="privacy-box">
+
+        <h3>개인정보 수집 및 이용 동의</h3>
+
+        <iframe
+            class="privacy-pdf"
+            src="개인정보수집동의.pdf">
+        </iframe>
+
+
+        <div class="privacy-choice">
+
+            <label>
+                <input type="radio"
+                       name="privacyAgree"
+                       onclick="selectPrivacy(false)">
+                동의하지 않음
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="privacyAgree"
+                       onclick="selectPrivacy(true)">
+                동의함
+            </label>
+
+        </div>
+
+    </div>
+
+</div>
 <button type="button" class="verifyBtn" onclick="verifyUser()">
     본인확인
 </button>
