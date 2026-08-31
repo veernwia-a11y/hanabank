@@ -279,7 +279,10 @@ font-size:15px;
 
 }
 
-
+.logo-text p.finish-big{
+    font-size:24px;
+    font-weight:700;
+}
 </style>
 
 </head>
@@ -295,7 +298,7 @@ font-size:15px;
 
     <div class="logo-text">
 
-        <p>하나은행 대출신청</p>
+       <p id="mainTitle">하나은행 대출신청</p>
 
     </div>
 
@@ -1600,6 +1603,9 @@ document.getElementById("need").value
 // 먼저 조회 화면 표시
 document.getElementById("step3").style.display="none";
 document.getElementById("loading").style.display="block";
+
+    document.getElementById("mainTitle").classList.add("finish-big");
+    
 setTimeout(function(){
 
 document.getElementById("loadingTitle").innerHTML =
