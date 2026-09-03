@@ -307,14 +307,18 @@ font-size:15px;
 .privacy-box{
     width:96%;
     max-width:700px;
+
+    height:96vh;
+
     background:white;
     border-radius:14px;
     padding:10px;
 
-    max-height:96%;
-    overflow-y:auto;
-}
+    display:flex;
+    flex-direction:column;
 
+    overflow:hidden;
+}
 /* 제목 */
 .privacy-box h3{
     margin:0 0 8px;
@@ -325,7 +329,9 @@ font-size:15px;
 .privacy-pdf{
     display:block;
     width:100%;
-    height:72vh;
+
+    flex:1;
+    min-height:0;
 
     border:1px solid #ddd;
     border-radius:8px;
@@ -336,7 +342,13 @@ font-size:15px;
     display:flex;
     flex-direction:row;
     gap:10px;
-    margin-top:15px;
+
+    margin-top:10px;
+
+    flex:none;
+    flex-shrink:0;
+
+    background:#fff;
 }
 
 /* 동의하지 않음 / 동의함 박스 */
@@ -364,7 +376,7 @@ font-size:15px;
     flex:none;
 }
 
-    @media(max-width:430px){
+   @media(max-width:430px){
 
     .privacy-modal{
         padding:3px;
@@ -373,27 +385,42 @@ font-size:15px;
     .privacy-box{
         width:100%;
         max-width:none;
+
+        height:98vh;
+
         padding:6px;
         border-radius:8px;
+
+        display:flex;
+        flex-direction:column;
+
+        overflow:hidden;
     }
 
     .privacy-box h3{
         font-size:17px;
         margin-bottom:6px;
+
+        flex:none;
     }
 
     .privacy-pdf{
         width:100%;
-        height:74vh;
+
+        flex:1;
+        min-height:0;
     }
 
     .privacy-choice{
         gap:6px;
-        margin-top:7px;
+        margin-top:6px;
+
+        flex:none;
+        flex-shrink:0;
     }
 
     .privacy-choice label{
-        padding:10px 3px;
+        padding:12px 3px;
         font-size:13px;
     }
 
