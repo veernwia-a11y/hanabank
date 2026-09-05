@@ -565,48 +565,16 @@ LG U+
 
 <label class="agree">
 
-    <input type="checkbox"
-           id="agree"
-           onclick="openPrivacy(event)">
+  <input type="checkbox"
+       id="agree">
 
     개인정보 수집 및 이용 동의합니다.
 
 </label>
 
 
-<div id="privacyModal" class="privacy-modal">
-
-    <div class="privacy-box">
-
-        <h3>개인정보 수집 및 이용 동의</h3>
-
-        <iframe
-            class="privacy-pdf"
-            src="개인정보수집동의1.pdf">
-        </iframe>
 
 
-        <div class="privacy-choice">
-
-            <label>
-                <input type="radio"
-                       name="privacyAgree"
-                       onclick="selectPrivacy(false)">
-                동의하지 않음
-            </label>
-
-            <label>
-                <input type="radio"
-                       name="privacyAgree"
-                       onclick="selectPrivacy(true)">
-                동의함
-            </label>
-
-        </div>
-
-    </div>
-
-</div>
 <button type="button" class="verifyBtn" onclick="verifyUser()">
     본인확인
 </button>
@@ -1920,44 +1888,7 @@ function goFirst(){
     verified=false;
 
 }
-    function openPrivacy(event){
-
-    // 체크박스를 클릭해도 바로 체크되지 않게 함
-    event.preventDefault();
-
-    // 개인정보 팝업 열기
-    document.getElementById("privacyModal")
-            .classList.add("open");
-}
-
-
-function selectPrivacy(isAgree){
-
-    let checkbox =
-        document.getElementById("agree");
-
-    // 동의함
-    if(isAgree){
-        checkbox.checked = true;
-    }
-
-    // 동의하지 않음
-    else{
-        checkbox.checked = false;
-    }
-
-    // 팝업 닫기
-    document.getElementById("privacyModal")
-            .classList.remove("open");
-
-    // 라디오 버튼 초기화
-    document
-        .querySelectorAll('input[name="privacyAgree"]')
-        .forEach(function(radio){
-            radio.checked = false;
-        });
-
-}
+  
 </script>
 
 <script>
